@@ -1,7 +1,7 @@
 {
   "name": "landing-grid",
   "version": "0.0.1",
-  "description": "Grid system",
+  "description": "Flexbox grid system to build landing pages",
   "author": "ux-ui.pro",
   "license": "MIT",
   "repository": {
