@@ -1,0 +1,41 @@
+:root {
+	--wrapper: min(1400px, 90vw);
+	--gutter: 2vw;
+	--leftMargin: calc((100vw - var(--wrapper)) / 2);
+	--onecol: calc((var(--wrapper) - 11 * var(--gutter)) / 12);
+}
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: var(--wrapper);
+	display: flex;
+}
+
+.column {
+	box-sizing: border-box;
+	flex: 1 0 calc(var(--onecol) * var(--column) + calc(var(--column) - 1) * var(--gutter));
+	margin-left: calc(var(--onecol) * var(--offset, 0) + calc(var(--offset, 0) - 1) * var(--gutter) + var(--gutter));
+	margin-right: var(--gutter);
+
+	&:not(.column--infinite) {
+		max-width: calc(var(--onecol) * var(--column) + calc(var(--column) - 1) * var(--gutter));
+	}
+
+	&--infinite {
+		flex: 1 0 calc(calc(var(--onecol) * var(--column) + calc(var(--column) - 1) * var(--gutter)) + var(--leftMargin));
+
+		&:first-of-type {
+			margin-left: calc(var(--leftMargin) * -1);
+		}
+	}
+}
+
+.big-to-left {
+	width: calc(var(--wrapper) + var(--leftMargin));
+}
+
+.big-to-right {
+	width: calc(var(--wrapper) + var(--leftMargin));
+	transform: translateX(var(--leftMargin));
+}
