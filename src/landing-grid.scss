@@ -1,6 +1,6 @@
 :root {
-	--wrapper: min(1400px, 90vw);
-	--gutter: 2vw;
+	--wrapper: min(1600px, 92vw);
+	--gutter: min(60px, 4vw);
 	--leftMargin: calc((100vw - var(--wrapper)) / 2);
 	--onecol: calc((var(--wrapper) - 11 * var(--gutter)) / 12);
 }
@@ -29,13 +29,4 @@
 			margin-left: calc(var(--leftMargin) * -1);
 		}
 	}
-}
-
-.big-to-left {
-	width: calc(var(--wrapper) + var(--leftMargin));
-}
-
-.big-to-right {
-	width: calc(var(--wrapper) + var(--leftMargin));
-	transform: translateX(var(--leftMargin));
 }
