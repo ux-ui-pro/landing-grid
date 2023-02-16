@@ -8,7 +8,7 @@
 [![GitHub package version](https://img.shields.io/github/package-json/v/ux-ui-pro/landing-grid.svg)](https://github.com/ux-ui-pro/landing-grid)
 [![NPM Downloads](https://img.shields.io/npm/dm/landing-grid.svg?style=flat)](https://www.npmjs.org/package/landing-grid)
 
-<sup>380 bytes gzipped</sup>
+<sup>340 bytes gzipped</sup>
 <h3><a href="https://ux-ui-pro.github.io/landing-grid/dist/">Demo</a></h3>
 
 </div>
