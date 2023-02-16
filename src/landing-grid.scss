@@ -2,7 +2,7 @@
 	--landingGridWidth: var(--wrapper, min(1600px, 92vw));
 	--landingGridGutter: var(--gutter, min(60px, 4vw));
 	--landingGridColumn: calc((var(--landingGridWidth) - 11 * var(--landingGridGutter)) / 12);
-	--leftMargin: calc((100vw - var(--landingGridWidth)) / 2);
+	--landingGridMargin: calc((100vw - var(--landingGridWidth)) / 2);
 }
 
 .wrapper {
@@ -23,10 +23,10 @@
 	}
 
 	&--infinite {
-		flex: 1 0 calc(calc(var(--landingGridColumn) * var(--column) + calc(var(--column) - 1) * var(--landingGridGutter)) + var(--leftMargin));
+		flex: 1 0 calc(calc(var(--landingGridColumn) * var(--column) + calc(var(--column) - 1) * var(--landingGridGutter)) + var(--landingGridMargin));
 
 		&:first-of-type {
-			margin-left: calc(var(--leftMargin) * -1);
+			margin-left: calc(var(--landingGridMargin) * -1);
 		}
 	}
 }

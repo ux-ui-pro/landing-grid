@@ -28,12 +28,12 @@
         }
 
         .wrapper-to-left {
-            width: calc(var(--wrapper, min(1600px, 92vw)) + var(--leftMargin));
+            width: calc(min(1600px, 92vw) + var(--landingGridMargin));
         }
 
         .wrapper-to-right {
-            width: calc(var(--wrapper, min(1600px, 92vw)) + var(--leftMargin));
-            transform: translateX(var(--leftMargin));
+            width: calc(min(1600px, 92vw) + var(--landingGridMargin));
+            transform: translateX(var(--landingGridMargin));
         }
 
         .column,
