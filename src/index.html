@@ -41,11 +41,11 @@
         }
 
         .wrapper-to-left {
-            width: calc(var(--wrapper) + var(--leftMargin));
+            width: calc(var(--wrapper, min(1600px, 92vw)) + var(--leftMargin));
         }
 
         .wrapper-to-right {
-            width: calc(var(--wrapper) + var(--leftMargin));
+            width: calc(var(--wrapper, min(1600px, 92vw)) + var(--leftMargin));
             transform: translateX(var(--leftMargin));
         }
 	</style>
