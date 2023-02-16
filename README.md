@@ -19,6 +19,14 @@
 ```SCSS
 @import "node_modules/landing-grid/src/landing-grid.scss";
 ```
+<br>
+
+### Settings
+
+| Variable           | Description                                                                                                                                                          |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--wrapper`        | Sets the width of the wrapper and the size of the margins from the wrapper on the left and right. For example: `80vw` or `calc(100vw - 100px)` or `min(1600px, 92vw)`|                                                                                                                             |
+| `--gutter`         | Sets the size of the margins between the columns.                                                                                                                    |
 
 <br>
 
