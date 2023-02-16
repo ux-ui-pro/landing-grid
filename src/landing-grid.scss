@@ -1,29 +1,29 @@
 :root {
-	--wrapper: min(1600px, 92vw);
-	--gutter: min(60px, 4vw);
-	--leftMargin: calc((100vw - var(--wrapper)) / 2);
-	--onecol: calc((var(--wrapper) - 11 * var(--gutter)) / 12);
+	--landingGridWidth: var(--wrapper, min(1600px, 92vw));
+	--landingGridGutter: var(--gutter, min(60px, 4vw));
+	--landingGridColumn: calc((var(--landingGridWidth) - 11 * var(--landingGridGutter)) / 12);
+	--leftMargin: calc((100vw - var(--landingGridWidth)) / 2);
 }
 
 .wrapper {
 	position: relative;
 	margin: 0 auto;
-	width: var(--wrapper);
+	width: var(--landingGridWidth);
 	display: flex;
 }
 
 .column {
 	box-sizing: border-box;
-	flex: 1 0 calc(var(--onecol) * var(--column) + calc(var(--column) - 1) * var(--gutter));
-	margin-left: calc(var(--onecol) * var(--offset, 0) + calc(var(--offset, 0) - 1) * var(--gutter) + var(--gutter));
-	margin-right: var(--gutter);
+	flex: 1 0 calc(var(--landingGridColumn) * var(--column) + calc(var(--column) - 1) * var(--landingGridGutter));
+	margin-left: calc(var(--landingGridColumn) * var(--offset, 0) + calc(var(--offset, 0) - 1) * var(--landingGridGutter) + var(--landingGridGutter));
+	margin-right: var(--landingGridGutter);
 
 	&:not(.column--infinite) {
-		max-width: calc(var(--onecol) * var(--column) + calc(var(--column) - 1) * var(--gutter));
+		max-width: calc(var(--landingGridColumn) * var(--column) + calc(var(--column) - 1) * var(--landingGridGutter));
 	}
 
 	&--infinite {
-		flex: 1 0 calc(calc(var(--onecol) * var(--column) + calc(var(--column) - 1) * var(--gutter)) + var(--leftMargin));
+		flex: 1 0 calc(calc(var(--landingGridColumn) * var(--column) + calc(var(--column) - 1) * var(--landingGridGutter)) + var(--leftMargin));
 
 		&:first-of-type {
 			margin-left: calc(var(--leftMargin) * -1);
